@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-user = $1
+user=$1
 echo "### Crontab cleanup for user $user"
 crontab -u $user -r
 

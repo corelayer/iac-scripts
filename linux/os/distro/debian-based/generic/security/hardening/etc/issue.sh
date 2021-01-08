@@ -6,10 +6,13 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-echo "### Configuring issue"
+echo "### Remove old issue"
 rm -f /etc/issue
 rm -f /etc/issue.net
-cp ./templates/issue /etc/issue
+
+echo "### Configuring new issue"
+SCRIPT_PATH="$( cd $(dirname $0) && pwd)"
+cp $SCRIPT_PATH/templates/issue /etc/issue
 ln -s /etc/issue /etc/issue.net
 chmod 644 /etc/issue*
 

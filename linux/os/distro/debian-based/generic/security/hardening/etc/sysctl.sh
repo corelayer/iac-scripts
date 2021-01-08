@@ -6,9 +6,12 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-echo "### Configuring /etc/sysctl.conf"
+echo "### Remove old /etc/sysctl.conf"
 rm -f /etc/sysctl.conf
-cp /tmp/automation/os/linux/files/general/etc/sysctl.conf /etc/sysctl.conf
+
+echo "### Configuring new /etc/sysctl.conf"
+SCRIPT_PATH="$( cd $(dirname $0) && pwd)"
+cp $SCRIPT_PATH/templates/sysctl.conf /etc/sysctl.conf
 chown root:root /etc/sysctl.conf
 chmod 644 /etc/sysctl.conf
 sysctl -p

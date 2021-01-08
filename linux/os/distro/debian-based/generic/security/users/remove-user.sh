@@ -5,11 +5,11 @@ echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
-user = $1
+user=$1
 echo "### Remove user $user"
 deluser $user --remove-home
 
-echo "### Remove stager from sudoers.d"
+echo "### Remove user $user from sudoers.d"
 FILE=/etc/sudoers.d/$user
 if test -f "$FILE"; then
   rm $FILE
