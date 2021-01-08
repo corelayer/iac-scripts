@@ -1,17 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - DEBIAN-BASED - UBUNTU - HARDENING - ISSUE"
+echo "LINUX - SOFTWARE - HASHICORP - GENERAL - REPOSITORY CentOS"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-echo "### Configuring issue"
-rm -f /etc/issue
-rm -f /etc/issue.net
-cp ./templates/issue /etc/issue
-ln -s /etc/issue /etc/issue.net
-chmod 644 /etc/issue*
+yum install -y yum-utils
+yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
 
 echo "#                                                                      #"
@@ -21,4 +17,3 @@ echo " "
 echo " "
 echo " "
 echo " "
-

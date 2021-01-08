@@ -1,17 +1,19 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - DEBIAN-BASED - UBUNTU - HARDENING - ISSUE"
+echo "LINUX - OS - DISTRO - DEBIAN-BASED - GENERIC - SECURITY remove user"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
+user = $1
+echo "### Remove user $user"
+deluser $user --remove-home
 
-echo "### Configuring issue"
-rm -f /etc/issue
-rm -f /etc/issue.net
-cp ./templates/issue /etc/issue
-ln -s /etc/issue /etc/issue.net
-chmod 644 /etc/issue*
+echo "### Remove stager from sudoers.d"
+FILE=/etc/sudoers.d/$user
+if test -f "$FILE"; then
+  rm $FILE
+fi
 
 
 echo "#                                                                      #"

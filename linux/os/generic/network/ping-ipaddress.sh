@@ -6,8 +6,8 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-$ipaddress=$1
-ping -c 10 $1
+ipaddress=$1
+ping -c 10 $ipaddress
 
 
 echo "#                                                                      #"

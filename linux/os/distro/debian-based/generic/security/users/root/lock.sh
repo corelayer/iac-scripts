@@ -1,17 +1,11 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - DEBIAN-BASED - UBUNTU - HARDENING - ISSUE"
+echo "LINUX - OS - DISTRO - DEBIAN-BASED - GENERIC - SECURITY lock root user"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
-
-echo "### Configuring issue"
-rm -f /etc/issue
-rm -f /etc/issue.net
-cp ./templates/issue /etc/issue
-ln -s /etc/issue /etc/issue.net
-chmod 644 /etc/issue*
+passwd -l root
 
 
 echo "#                                                                      #"
