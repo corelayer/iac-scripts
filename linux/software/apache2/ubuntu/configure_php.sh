@@ -1,14 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Install"
+echo "LINUX - SOFTWARE - APACHE2 - UBUNTU - Configure PHP"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get update
-apt-get install -y software-properties-common mariadb-server mariadb-client
-
+apt-get -y install libapache2-mod-php
+systemctl restart apache2
 
 echo "#                                                                      #"
 echo "#                                                                      #"

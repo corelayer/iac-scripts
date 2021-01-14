@@ -1,14 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Install"
+echo "LINUX - SOFTWARE - APACHE2 - UBUNTU - Install"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get update
-apt-get install -y software-properties-common mariadb-server mariadb-client
-
+a2enmod rewrite
+systemctl restart apache2
 
 echo "#                                                                      #"
 echo "#                                                                      #"

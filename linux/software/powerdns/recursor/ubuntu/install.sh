@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Install"
+echo "LINUX - SOFTWARE - POWERDNS - RECURSOR - UBUNTU - Install"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
 apt-get update
-apt-get install -y software-properties-common mariadb-server mariadb-client
+apt-get install -y pdns-recursor
 
 
 echo "#                                                                      #"

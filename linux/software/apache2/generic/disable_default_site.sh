@@ -1,13 +1,14 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Install"
+echo "LINUX - SOFTWARE - APACHE2 - GENERIC - Disable default websites"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get update
-apt-get install -y software-properties-common mariadb-server mariadb-client
+a2dissite default
+a2dissite default-ssl
+systemctl apache2 restart
 
 
 echo "#                                                                      #"

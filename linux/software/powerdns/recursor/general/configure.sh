@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Install"
+echo "LINUX - SOFTWARE - POWERDNS - RECURSOR - UBUNTU - Install"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
-
-apt-get update
-apt-get install -y software-properties-common mariadb-server mariadb-client
+ipaddress=$1
+cp ./linux/software/powerdns/recursor/templates/recursor.conf /etc/powerdns/.
+sed -i "s/local-address=0.0.0.0/local-address=$ipaddress/" /etc/powerdns/recursor.conf
 
 
 echo "#                                                                      #"

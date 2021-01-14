@@ -1,14 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Install"
+echo "LINUX - SOFTWARE - PHP - UBUNTU - Install"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get update
-apt-get install -y software-properties-common mariadb-server mariadb-client
-
+apt-get update 
+apt-get -y install php php-{mysql,curl,gd,intl,pear,imap,memcache,pspell,tidy,xmlrpc,mbstring,gmp,json,xml,fpm}
 
 echo "#                                                                      #"
 echo "#                                                                      #"
