@@ -24,7 +24,7 @@ sed -i "s/db\['user'\] = 'phpipam'/db\['user'\] = '$database_user'/" $phpipam_in
 sed -i "s/db\['pass'\] = 'phpipamadmin'/db\['pass'\] = '$database_password'/" $phpipam_install_path/config.php
 sed -i "s/db\['name'\] = 'phpipam'/db\['name'\] = '$database_name'/" $phpipam_install_path/config.php
 
-mysql -u $mariadb_username -p$mariadb_password $database_name < $phpipam_install_path/db/SCHEMA.sql
+mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password $database_name < $phpipam_install_path/db/SCHEMA.sql
 
 php $phpipam_install_path/functions/scripts/reset-admin-password.php $application_password
 
