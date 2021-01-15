@@ -7,7 +7,7 @@ echo "#                                                                      #"
 
 
 apt-get update 
-apt-get -y install php php-{mysql,curl,gd,intl,pear,imap,memcache,pspell,tidy,xmlrpc,mbstring,gmp,json,xml}
+apt-get -y install php php-mysql php-curl php-gd php-intl php-pear php-imap php-memcache php-pspell php-tidy php-xmlrpc php-mbstring php-gmp php-json php-xml
 
 echo "#                                                                      #"
 echo "#                                                                      #"
