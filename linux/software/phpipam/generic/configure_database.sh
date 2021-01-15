@@ -5,13 +5,15 @@ echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
-database_name=$1
-database_user=$2
-database_password=$3
+mariadb_username=$1
+mariadb_password=$2
+database_name=$3
+database_user=$4
+database_password=$5
 
-mysql -e "CREATE DATABASE $database_name;"
-mysql -e "GRANT ALL ON $database_name.* TO $database_user@localhost IDENTIFIED BY '$database_password';"
-mysql -e "FLUSH PRIVILEGES;"
+mysql -u $mariadb_username -p $mariadb_password -e "CREATE DATABASE $database_name;"
+mysql -u $mariadb_username -p $mariadb_password -e "GRANT ALL ON $database_name.* TO $database_user@localhost IDENTIFIED BY '$database_password';"
+mysql -u $mariadb_username -p $mariadb_password -e "FLUSH PRIVILEGES;"
 
 
 echo "#                                                                      #"
