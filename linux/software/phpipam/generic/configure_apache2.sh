@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 template_directory=$1
-install_path=$2
+install_path=$(printf "%q" $2)
 servername=$3
 serveralias=$4
 serveradmin=$5
