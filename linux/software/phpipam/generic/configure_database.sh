@@ -28,7 +28,7 @@ mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password $database_na
 
 php $phpipam_install_path/functions/scripts/reset-admin-password.php $application_password
 
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password $mariadb_hostname -e "UPDATE $database_name.users SET passChange='No'WHERE id=1;"
+mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "UPDATE $database_name.users SET passChange='No'WHERE id=1;"
 
 echo "#                                                                      #"
 echo "#                                                                      #"
