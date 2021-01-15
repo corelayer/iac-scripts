@@ -19,10 +19,10 @@ mysql -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $database_name.*
 mysql -u $mariadb_username -p$mariadb_password -e "FLUSH PRIVILEGES;"
 
 
-sed -i "s/\$db['host'] = 'localhost';/\$db['host'] = '$mariadb_hostname';/" $phpipam_install_path/config.php
-sed -i "s/\$db['user'] = 'localhost';/\$db['user'] = '$database_user';/" $phpipam_install_path/config.php
-sed -i "s/\$db['pass'] = 'localhost';/\$db['pass'] = '$database_password';/" $phpipam_install_path/config.php
-sed -i "s/\$db['name'] = 'localhost';/\$db['name'] = '$database_name';/" $phpipam_install_path/config.php
+sed -i "s/db\['host'\] = 'localhost'/db\['host'\] = '$mariadb_hostname'/" $phpipam_install_path/config.php
+sed -i "s/db\['user'\] = 'phpipam'/db\['user'\] = '$database_user'/" $phpipam_install_path/config.php
+sed -i "s/db\['pass'\] = 'phpipamadmin'/db\['pass'\] = '$database_password'/" $phpipam_install_path/config.php
+sed -i "s/db\['name'\] = 'phpipam'/db\['name'\] = '$database_name'/" $phpipam_install_path/config.php
 
 
 echo "#                                                                      #"
