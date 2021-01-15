@@ -8,7 +8,7 @@ echo "#                                                                      #"
 
 a2dissite 000-default
 a2dissite default-ssl
-systemctl apache2 restart
+systemctl reload apache2
 
 
 echo "#                                                                      #"
