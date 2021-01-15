@@ -19,6 +19,7 @@ sed -i "s/<serveralias>/$serveralias/" /etc/apache2/sites-available/phpipam.conf
 sed -i "s/<serveradmin>/$serveradmin/" /etc/apache2/sites-available/phpipam.conf
 
 a2ensite phpipam.conf
+systemctl restart apache2
 
 
 echo "#                                                                      #"
