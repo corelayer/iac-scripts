@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - MARIADB - UBUNTU - Secure Installation"
+echo "LINUX - SOFTWARE - MYSQL - UBUNTU - Secure Installation"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
