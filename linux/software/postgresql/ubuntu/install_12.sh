@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get install -u postgresql-12
+apt-get install -y postgresql-12
 
 echo "#                                                                      #"
 echo "#                                                                      #"
