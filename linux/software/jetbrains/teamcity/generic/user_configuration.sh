@@ -1,14 +1,17 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - JETBRAINS - TEAMCITY - GENERIC - Install"
+echo "LINUX - SOFTWARE - JETBRAINS - TEAMCITY - GENERIC - Add user"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-cd /tmp
-wget https://download.jetbrains.com/teamcity/TeamCity-2020.2.1.tar.gz
-tar zxvf TeamCity*
+new_user_password=$1
+
+echo "### Add user teamcity"
+useradd teamcity --no-log-init --home-dir /home/teamcity --create-home --shell /bin/bash
+echo "teamcity:$new_user_password" | chpasswd
+
 
 echo "#                                                                      #"
 echo "#                                                                      #"
