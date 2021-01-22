@@ -6,15 +6,17 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-$ipv4_listen=$1
-$upstream_dns1=$2
-$upstream_dns2=$3
+ipv4_listen=$1
+upstream_dns1=$2
+upstream_dns2=$3
+webpassword=$4
 
 cp -r templates/* /etc/pihole/.
 
-sed -i "s/IPV4_ADDRESS=0.0.0.0/IPV4_ADDRESS=$1/" /etc/pihole/setupVars.conf
-sed -i "s/PIHOLE_DNS_1=0.0.0.0/PIHOLE_DNS_1=$2/" /etc/pihole/setupVars.conf
-sed -i "s/PIHOLE_DNS_2=0.0.0.0/PIHOLE_DNS_2=$3/" /etc/pihole/setupVars.conf
+sed -i "s/IPV4_ADDRESS=0.0.0.0/IPV4_ADDRESS=$ipv4_listen/" /etc/pihole/setupVars.conf
+sed -i "s/PIHOLE_DNS_1=0.0.0.0/PIHOLE_DNS_1=$upstream_dns1/" /etc/pihole/setupVars.conf
+sed -i "s/PIHOLE_DNS_2=0.0.0.0/PIHOLE_DNS_2=$upstream_dns1/" /etc/pihole/setupVars.conf
+sed -i "s/WEBPASSWORD=/WEBPASSWORD=$webpassword/" /etc/pihole/setupVars.conf
 
 
 echo "#                                                                      #"
