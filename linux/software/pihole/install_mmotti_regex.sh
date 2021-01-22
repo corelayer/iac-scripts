@@ -7,7 +7,7 @@ echo "#                                                                      #"
 
 
 apt-get install -y python3
-curl -sSl https://raw.githubusercontent.com/mmotti/pihole-regex/master/install.py | sudo python3
+curl -sSl https://raw.githubusercontent.com/mmotti/pihole-regex/master/install.py | python3
 
 
 echo "#                                                                      #"
