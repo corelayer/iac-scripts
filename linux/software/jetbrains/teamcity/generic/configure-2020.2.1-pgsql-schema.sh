@@ -5,12 +5,13 @@ echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
-database_user=$1
-database_password=$2
-database_schema=$3
+database_name=$1
+database_user=$2
+database_password=$3
+database_schema=$4
 
-su -c psql "CREATE ROLE $database_user LOGIN PASSWORD '$database_password' NOINHERIT CREATEDB;" postgres 
-su -c psql "CREATE SCHEMA IF NOT EXISTS $database_schema AUTHORIZATION $database_user;" postgres 
+su -c "psql -c \"CREATE ROLE $database_user LOGIN PASSWORD '$database_password' NOINHERIT CREATEDB;\" -d $database_name -U postgres" postgres
+su -c "psql -c \"CREATE SCHEMA IF NOT EXISTS $database_schema AUTHORIZATION $database_user;\" -d $database_name -U postgres" postgres
 
 echo "#                                                                      #"
 echo "#                                                                      #"
@@ -19,4 +20,3 @@ echo " "
 echo " "
 echo " "
 echo " "
-
