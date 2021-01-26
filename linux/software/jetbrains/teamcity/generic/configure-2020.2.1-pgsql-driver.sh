@@ -9,8 +9,8 @@ echo "#                                                                      #"
 target_data_path=$1
 
 ### Create JDBC-driver directory in data path
-mkdir -p $target_data_path/.BuildServer/lib/jdbc
-cd $target_data_path/.BuildServer/lib/jdbc
+mkdir -p $target_data_path/lib/jdbc
+cd $target_data_path/lib/jdbc
 
 ### Download JDBC-driver
 wget https://jdbc.postgresql.org/download/postgresql-42.2.18.jar
