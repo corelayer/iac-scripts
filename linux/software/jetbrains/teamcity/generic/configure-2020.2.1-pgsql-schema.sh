@@ -9,8 +9,8 @@ database_user=$1
 database_password=$2
 database_schema=$3
 
-su - postgres psql -c "CREATE ROLE $database_user LOGIN PASSWORD '$database_password' NOINHERIT CREATEDB;"
-su - postgres psql -c "CREATE SCHEMA IF NOT EXISTS $database_schema AUTHORIZATION $database_user;"
+su -c psql "CREATE ROLE $database_user LOGIN PASSWORD '$database_password' NOINHERIT CREATEDB;" postgres 
+su -c psql "CREATE SCHEMA IF NOT EXISTS $database_schema AUTHORIZATION $database_user;" postgres 
 
 echo "#                                                                      #"
 echo "#                                                                      #"
