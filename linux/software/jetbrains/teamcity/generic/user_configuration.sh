@@ -5,12 +5,12 @@ echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
-
-new_user_password=$1
+system_user=$1
+system_password=$2
 
 echo "### Add user teamcity"
-useradd teamcity --no-log-init --home-dir /home/teamcity --create-home --shell /bin/bash
-echo "teamcity:$new_user_password" | chpasswd
+useradd $system_user --no-log-init --home-dir /home/$system_user --create-home --shell /bin/bash
+echo "$system_user:$system_password" | chpasswd
 
 
 echo "#                                                                      #"
