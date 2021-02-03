@@ -9,6 +9,8 @@ echo "#                                                                      #"
 pihole -w "sp.nba.com"
 pihole -w "go.sdworx.com"
 pihole -w "go.fortinet.com"
+pihole -w "support.iam.ad.azure.com"
+pihole -w "main.iam.ad.ext.azure.com"
 
 
 echo "#                                                                      #"
