@@ -21,6 +21,7 @@ do
     inProgress=false
 done
 echo "Done."
+sleep 5s
 
 
 
