@@ -13,12 +13,12 @@ do
     output=$(ps aux | grep apt-get | grep -i dpkg)
     if [ "$output" ]; then
         echo "APT is running, sleep for 5 seconds"
-        sleep 5s
         continue
     fi
     
     inProgress=false
 done
+echo "Done."
 
 
 
