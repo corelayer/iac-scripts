@@ -9,10 +9,10 @@ echo "#                                                                      #"
 inProgress=true
 while [ $inProgress = true ]
 do
-    sleep 5s
+    sleep 10s
     output=$(ps aux | grep apt-get | grep -i dpkg)
     if [ "$output" ]; then
-        echo "APT is running, sleep for 5 seconds"
+        echo "APT is running, sleep for 10 seconds"
         continue
     fi
     
