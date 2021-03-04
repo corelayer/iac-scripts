@@ -9,27 +9,28 @@ mariadb_hostname=$1
 mariadb_port=$2
 mariadb_username=$3
 mariadb_password=$4
-database_name=$5
-database_user=$6
-database_password=$7
-application_password=$8
-phpipam_install_path=$9
+ipam_hostname=$5
+ipam_database=$6
+ipam_username=$7
+ipam_password=$8
+application_password=$9
+phpipam_install_path=$10
 
-mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "CREATE DATABASE $database_name;"
-mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $database_name.* TO $database_user@localhost IDENTIFIED BY '$database_password';"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "CREATE DATABASE $ipam_database;"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $ipam_database.* TO $ipam_username@'%' IDENTIFIED BY '$ipam_password';"
 mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "FLUSH PRIVILEGES;"
 
 
 sed -i "s/db\['host'\] = 'localhost'/db\['host'\] = '$mariadb_hostname'/" $phpipam_install_path/config.php
-sed -i "s/db\['user'\] = 'phpipam'/db\['user'\] = '$database_user'/" $phpipam_install_path/config.php
-sed -i "s/db\['pass'\] = 'phpipamadmin'/db\['pass'\] = '$database_password'/" $phpipam_install_path/config.php
-sed -i "s/db\['name'\] = 'phpipam'/db\['name'\] = '$database_name'/" $phpipam_install_path/config.php
+sed -i "s/db\['user'\] = 'phpipam'/db\['user'\] = '$ipam_username'/" $phpipam_install_path/config.php
+sed -i "s/db\['pass'\] = 'phpipamadmin'/db\['pass'\] = '$ipam_password'/" $phpipam_install_path/config.php
+sed -i "s/db\['name'\] = 'phpipam'/db\['name'\] = '$ipam_database'/" $phpipam_install_path/config.php
 
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password $database_name < $phpipam_install_path/db/SCHEMA.sql
+mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password $ipam_database < $phpipam_install_path/db/SCHEMA.sql
 
 php $phpipam_install_path/functions/scripts/reset-admin-password.php $application_password
 
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "UPDATE $database_name.users SET passChange='No'WHERE id=1;"
+mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "UPDATE $ipam_database.users SET passChange='No'WHERE id=1;"
 
 echo "#                                                                      #"
 echo "#                                                                      #"
