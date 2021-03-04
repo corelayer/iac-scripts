@@ -17,7 +17,7 @@ application_password=$9
 phpipam_install_path=$10
 
 mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "CREATE DATABASE $ipam_database;"
-mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $ipam_database.* TO $ipam_username@'%' IDENTIFIED BY '$ipam_password';"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $ipam_database.* TO $ipam_username@$ipam_hostname IDENTIFIED BY '$ipam_password';"
 mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "FLUSH PRIVILEGES;"
 
 
