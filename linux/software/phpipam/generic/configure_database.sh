@@ -22,7 +22,7 @@ mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_pass
 
 
 sed -i "s/db\['host'\] = 'localhost'/db\['host'\] = '$mariadb_hostname'/" $phpipam_install_path/config.php
-sed -i "s/db\['port'\] = '3306'/db\['port'\] = '$mariadb_port'/" $phpipam_install_path/config.php
+sed -i "s/db\['port'\] = 3306/db\['port'\] = $mariadb_port/" $phpipam_install_path/config.php
 sed -i "s/db\['user'\] = 'phpipam'/db\['user'\] = '$ipam_username'/" $phpipam_install_path/config.php
 sed -i "s/db\['pass'\] = 'phpipamadmin'/db\['pass'\] = '$ipam_password'/" $phpipam_install_path/config.php
 sed -i "s/db\['name'\] = 'phpipam'/db\['name'\] = '$ipam_database'/" $phpipam_install_path/config.php
