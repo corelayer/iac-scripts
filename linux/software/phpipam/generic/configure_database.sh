@@ -6,17 +6,18 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 mariadb_hostname=$1
-mariadb_username=$2
-mariadb_password=$3
-database_name=$4
-database_user=$5
-database_password=$6
-application_password=$7
-phpipam_install_path=$8
+mariadb_port=$2
+mariadb_username=$3
+mariadb_password=$4
+database_name=$5
+database_user=$6
+database_password=$7
+application_password=$8
+phpipam_install_path=$9
 
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "CREATE DATABASE $database_name;"
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $database_name.* TO $database_user@localhost IDENTIFIED BY '$database_password';"
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "FLUSH PRIVILEGES;"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "CREATE DATABASE $database_name;"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "GRANT ALL ON $database_name.* TO $database_user@localhost IDENTIFIED BY '$database_password';"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "FLUSH PRIVILEGES;"
 
 
 sed -i "s/db\['host'\] = 'localhost'/db\['host'\] = '$mariadb_hostname'/" $phpipam_install_path/config.php
