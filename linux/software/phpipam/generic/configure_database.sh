@@ -26,11 +26,11 @@ sed -i "s/db\['user'\] = 'phpipam'/db\['user'\] = '$ipam_username'/" $phpipam_in
 sed -i "s/db\['pass'\] = 'phpipamadmin'/db\['pass'\] = '$ipam_password'/" $phpipam_install_path/config.php
 sed -i "s/db\['name'\] = 'phpipam'/db\['name'\] = '$ipam_database'/" $phpipam_install_path/config.php
 
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password $ipam_database < $phpipam_install_path/db/SCHEMA.sql
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password $ipam_database < $phpipam_install_path/db/SCHEMA.sql
 
 php $phpipam_install_path/functions/scripts/reset-admin-password.php $application_password
 
-mysql -h $mariadb_hostname -u $mariadb_username -p$mariadb_password -e "UPDATE $ipam_database.users SET passChange='No'WHERE id=1;"
+mysql -h $mariadb_hostname -P $mariadb_port -u $mariadb_username -p$mariadb_password -e "UPDATE $ipam_database.users SET passChange='No'WHERE id=1;"
 
 echo "#                                                                      #"
 echo "#                                                                      #"
