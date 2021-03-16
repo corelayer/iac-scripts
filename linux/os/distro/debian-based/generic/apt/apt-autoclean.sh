@@ -7,7 +7,7 @@ echo "#                                                                      #"
 
 
 echo "Auto-clean unused packages"
-apt-get autoclean -q
+apt-get autoclean -q -y
 
 
 echo "#                                                                      #"

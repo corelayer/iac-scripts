@@ -7,7 +7,7 @@ echo "#                                                                      #"
 
 
 echo "Auto-remove unused and clean unused packages"
-apt-get autoremove -q
+apt-get autoremove -q -y
 
 
 echo "#                                                                      #"
