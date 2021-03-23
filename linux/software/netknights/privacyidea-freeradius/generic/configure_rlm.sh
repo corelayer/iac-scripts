@@ -1,12 +1,18 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - PRIVACYIDEA - GENERAL - REPOSITORY Ubuntu"
+echo "LINUX - SOFTWARE - NETKNIGHTS - PRIVACYIDEA FREERADIUS - GENERIC - Configure rlm.ini"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
+template_basepath=$1
+fqdn=$2
+check_ssl=$3
 
-apt-get install -y privacyidea-radius
+cp $template_basepath/linux/software/privacyidea/privacyidea-freeradius/templates/etc/privacyidea/rlm_perl.ini /etc/privacyidea/.
+sed -i "s~fqdn~$fqdn~" /etc/privacyidea/rlm_perl.ini
+sed -i "s~check_ssl~$check_ssl~" /etc/privacyidea/rlm_perl.ini
+
 
 echo "#                                                                      #"
 echo "#                                                                      #"
