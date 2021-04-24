@@ -14,11 +14,6 @@ apt-get install filebeat -y
 echo "### Enable filebeat in systemd"
 systemctl enable filebeat
 
-
-echo "### Move configuration file to /etc"
-cp ../templates/filebeat.yml /etc/filebeat.yml
-
-
 echo "### Restart auditbeat service"
 service filebeat restart
 
