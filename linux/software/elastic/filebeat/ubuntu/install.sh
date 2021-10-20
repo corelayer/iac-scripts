@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-echo "### Install auditbeat"
+echo "### Install filebeat"
 apt-get update
 apt-get install filebeat -y
 

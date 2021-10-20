@@ -6,15 +6,15 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-echo "### Install auditbeat"
+echo "### Install Kibana"
 apt-get update
 apt-get install kibana -y
 
 
-echo "### Enable filebeat in systemd"
+echo "### Enable Kibana in systemd"
 systemctl enable kibana
 
-echo "### Restart auditbeat service"
+echo "### Restart Kibana service"
 service filebeat kibana
 
 
