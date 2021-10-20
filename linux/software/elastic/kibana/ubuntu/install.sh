@@ -1,18 +1,21 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - ELASTIC - ELASTICSEARCH - Install"
+echo "LINUX - SOFTWARE - ELASTIC - KIBANA - Install"
 echo "########################################################################"
 echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-echo "### Install elasticsearch"
+echo "### Install auditbeat"
 apt-get update
-apt-get install elasticsearch -y
+apt-get install kibana -y
 
 
-echo "### Enable elasticsearch in systemd"
-systemctl enable elasticsearch
+echo "### Enable filebeat in systemd"
+systemctl enable kibana
+
+echo "### Restart auditbeat service"
+service filebeat kibana
 
 
 echo "#                                                                      #"
