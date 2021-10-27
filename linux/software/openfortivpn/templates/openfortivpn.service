@@ -1,0 +1,8 @@
+[Unit]
+Description=OpenFortiVpn
+
+[Service]
+ExecStart=/usr/bin/openfortivpn
+
+[Install]
+WantedBy=multi-user.target
