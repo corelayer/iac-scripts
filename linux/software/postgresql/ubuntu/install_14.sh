@@ -5,7 +5,7 @@ echo "########################################################################"
 echo "#                                                                      #"
 
 
-apt install -y postgresql-14
+apt-get install -y postgresql-14
 
 echo "#                                                                      #"
 echo "#                                                                      #"
