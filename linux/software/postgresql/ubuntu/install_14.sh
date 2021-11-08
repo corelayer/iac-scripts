@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - POSTGRESQL - UBUNTU - Install PostgreSQL 12"
+echo "LINUX - SOFTWARE - POSTGRESQL - UBUNTU - Install PostgreSQL 14"
 echo "########################################################################"
 echo "#                                                                      #"
 
 
-apt install -y postgresql-12
+apt install -y postgresql-14
 
 echo "#                                                                      #"
 echo "#                                                                      #"
