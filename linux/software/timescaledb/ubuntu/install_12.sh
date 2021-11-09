@@ -11,4 +11,3 @@ sudo apt install timescaledb-2-postgresql-12
 echo "#                                                                      #"
 echo "########################################################################"
 echo " "
-# Now install appropriate package for PG version
