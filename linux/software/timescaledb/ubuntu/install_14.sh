@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 echo "### Install TimeScaleDB for PostgreSQL 14.x"
-sudo apt-get install -y timescaledb-2-postgresql-14
+apt-get install -y timescaledb-2-postgresql-14
 
 echo "#                                                                      #"
 echo "########################################################################"
