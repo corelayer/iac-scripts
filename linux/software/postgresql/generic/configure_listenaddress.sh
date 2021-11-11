@@ -3,7 +3,6 @@ echo "########################################################################"
 echo "LINUX - SOFTWARE - POSTGRESQL - Configure"
 echo "########################################################################"
 echo "#                                                                      #"
-echo "#                                                                      #"
 
 version=$1
 ipv4_listen=$2
@@ -18,9 +17,5 @@ echo 'host    all      all              ::/0                         md5' | sudo
 service postgresql restart
 
 echo "#                                                                      #"
-echo "#                                                                      #"
 echo "########################################################################"
-echo " "
-echo " "
-echo " "
 echo " "

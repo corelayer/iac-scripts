@@ -4,10 +4,8 @@ echo "LINUX - SOFTWARE - POSTGRESQL - UBUNTU - Install PostgreSQL 12"
 echo "########################################################################"
 echo "#                                                                      #"
 
-
 apt-get install -y postgresql-12
 
-echo "#                                                                      #"
 echo "#                                                                      #"
 echo "########################################################################"
 echo " "

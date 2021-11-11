@@ -3,8 +3,6 @@ echo "########################################################################"
 echo "LINUX - SOFTWARE - PI-HOLE - Install Firebog lists"
 echo "########################################################################"
 echo "#                                                                      #"
-echo "#                                                                      #"
-
 
 inputFile=/tmp/firebog.txt
 wget -O $inputFile https://v.firebog.net/hosts/lists.php?type=tick
@@ -16,11 +14,6 @@ do
 done
 pihole -g
 
-
-echo "#                                                                      #"
 echo "#                                                                      #"
 echo "########################################################################"
-echo " "
-echo " "
-echo " "
 echo " "

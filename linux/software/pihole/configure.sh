@@ -3,8 +3,6 @@ echo "########################################################################"
 echo "LINUX - SOFTWARE - PI-HOLE - Configure"
 echo "########################################################################"
 echo "#                                                                      #"
-echo "#                                                                      #"
-
 
 ipv4_listen=$1
 upstream_dns1=$2
@@ -23,11 +21,6 @@ if [ "$auto_apply_netplan" = true ]; then
     echo $apply_line | crontab -u root -
 fi
 
-
-echo "#                                                                      #"
 echo "#                                                                      #"
 echo "########################################################################"
-echo " "
-echo " "
-echo " "
 echo " "

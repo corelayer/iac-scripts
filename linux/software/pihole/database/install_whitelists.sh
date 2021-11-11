@@ -3,8 +3,6 @@ echo "########################################################################"
 echo "LINUX - SOFTWARE - PI-HOLE - Install Whitelist entries"
 echo "########################################################################"
 echo "#                                                                      #"
-echo "#                                                                      #"
-
 
 pihole -w "sp.nba.com"
 pihole -w "go.sdworx.com"
@@ -15,9 +13,5 @@ pihole -w "tags.tiqcdn.com"
 pihole -w "pages.info.exclusive-networks.com"
 
 echo "#                                                                      #"
-echo "#                                                                      #"
 echo "########################################################################"
-echo " "
-echo " "
-echo " "
 echo " "

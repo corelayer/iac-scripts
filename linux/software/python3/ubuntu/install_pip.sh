@@ -1,12 +1,10 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - PI-HOLE - Install"
+echo "LINUX - SOFTWARE - PYTHON3 - PIP - UBUNTU - Install"
 echo "########################################################################"
 echo "#                                                                      #"
-
-git clone --depth 1 https://github.com/pi-hole/pi-hole.git pi-hole
-cd "pi-hole/automated install/"
-bash basic-install.sh --unattended
+apt-get update
+apt-get install -y python3-pip
 
 echo "#                                                                      #"
 echo "########################################################################"
