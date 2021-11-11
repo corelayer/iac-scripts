@@ -5,7 +5,7 @@ echo "########################################################################"
 echo "#"
 
 echo "### Install dependencies"
-apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 echo "### Download and install GPG key"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 echo "### Add apt-repository"
