@@ -1,10 +1,8 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - HASHICORP - GENERAL - REPOSITORY Ubuntu"
+echo "LINUX - SOFTWARE - ELASTIC - GENERAL - REPOSITORY Ubuntu"
 echo "########################################################################"
 echo "#                                                                      #"
-echo "#                                                                      #"
-
 
 echo "### Adding apt key"
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
@@ -14,11 +12,6 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee -a /e
 
 apt-get update
 
-
-echo "#                                                                      #"
 echo "#                                                                      #"
 echo "########################################################################"
-echo " "
-echo " "
-echo " "
 echo " "
