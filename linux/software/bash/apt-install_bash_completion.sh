@@ -1,15 +1,12 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - SOFTWARE - GIT - Install"
+echo "LINUX - SOFTWARE - BASH - Install Bash Completion"
 echo "########################################################################"
 
 
-apt-get update
-apt-get install git
+echo "### apt install bash-completion"
+sudo apt-get install -y bash-completion
 
 
 echo "########################################################################"
-echo " "
-echo " "
-echo " "
 echo " "

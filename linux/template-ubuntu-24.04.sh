@@ -32,7 +32,7 @@ sh /tmp/iac-scripts/linux/os/distro/deb-based/generic/apt/apt-autoremove.sh
 sh /tmp/iac-scripts/linux/os/distro/deb-based/generic/apt/apt-autoclean.sh
 
 echo "### Remove Provisioner User"
-sh /tmp/iac-scripts/linux/os/generic/cleanup/remove_provisioner_user.sh
+sh /tmp/iac-scripts/linux/os/generic/security/users/remove_provisioner_user.sh $PROVISIONER_USERNAME
 
 echo "########################################################################"
 echo " "
