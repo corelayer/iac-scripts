@@ -1,12 +1,18 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - OS - GENERIC - SECURITY remove user"
 echo "########################################################################"
 
 
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
+user=$1
+echo "### Remove user $user"
+deluser $user --remove-home
+
+echo "### Remove user $user from sudoers.d"
+FILE=/etc/sudoers.d/$user
+if test -f "$FILE"; then
+  rm $FILE
+fi
 
 
 echo "########################################################################"

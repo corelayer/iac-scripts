@@ -1,13 +1,10 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - SOFTWARE - OPENFORTIVPN - Create SystemD Service"
 echo "########################################################################"
 
-
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
-
+echo "### Copy service template to /lib/systemd/system/openfortivpn.service"
+cp templates/openfortivpn.service /lib/systemd/system/.
 
 echo "########################################################################"
 echo " "

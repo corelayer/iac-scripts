@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - SOFTWARE - ELASTIC - ELASTICSEARCH - GENERIC - Discovery Seed Hosts"
 echo "########################################################################"
 
+filepath=$1
+seed_hosts=$2
+echo $seed_hosts
 
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
-
+sed -i "s~#discovery.seed_hosts: \[\"host1\", \"host2\"\]~discovery.seed_hosts: $seed_hosts~" $filepath
 
 echo "########################################################################"
 echo " "

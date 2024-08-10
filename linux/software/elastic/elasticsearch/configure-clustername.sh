@@ -1,13 +1,12 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - SOFTWARE - ELASTIC - ELASTICSEARCH - GENERIC - Cluster Name"
 echo "########################################################################"
 
+filepath=$1
+clustername=$2
 
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
-
+sed -i "s~#cluster.name: my-application~cluster.name: $clustername~" $filepath
 
 echo "########################################################################"
 echo " "

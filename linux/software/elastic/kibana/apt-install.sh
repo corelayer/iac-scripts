@@ -1,13 +1,17 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - SOFTWARE - ELASTIC - KIBANA - Install"
 echo "########################################################################"
 
+echo "### Install Kibana"
+apt-get update
+apt-get install kibana -y
 
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
+echo "### Enable Kibana in systemd"
+systemctl enable kibana
 
+echo "### Restart Kibana service"
+service filebeat kibana
 
 echo "########################################################################"
 echo " "

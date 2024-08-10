@@ -1,13 +1,12 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - SOFTWARE - ELASTIC - KIBANA - GENERIC - Set ElasticSearch Hosts"
 echo "########################################################################"
 
+filepath=$1
+elasticsearchnodes=$2
 
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
-
+sed -i "s~#elasticsearch.hosts: \[\"http://localhost:9200\"\]~elasticsearch.hosts: $elasticsearchnodes~" $filepath
 
 echo "########################################################################"
 echo " "

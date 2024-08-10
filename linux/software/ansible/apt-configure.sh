@@ -1,13 +1,11 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - SOFTWARE - ANSIBLE - GENERAL - REPOSITORY Ubuntu"
 echo "########################################################################"
 
-
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
-
+echo "### Adding repository to sources.list"
+apt-add-repository -y ppa:ansible/ansible
+apt-get update
 
 echo "########################################################################"
 echo " "

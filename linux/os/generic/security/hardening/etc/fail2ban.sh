@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "########################################################################"
-echo "LINUX - OS - DISTRO - GENERIC - GRUB - Network interface names"
+echo "LINUX - OS - GENERIC - HARDENING - FAIL2BAN"
 echo "########################################################################"
 
 
-echo "### Updating GRUB"
-sed -ie 's/GRUB_CMDLINE_LINUX=.*/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"/' /etc/default/grub
-update-grub
+echo "### Configuring jails"
+SCRIPT_PATH="$( cd $(dirname $0) && pwd)"
+cp $SCRIPT_PATH/templates/fail2ban/jail.conf /etc/fail2ban/jail.local
 
 
 echo "########################################################################"
