@@ -10,10 +10,12 @@ sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-update.sh
 sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-configure.sh
 sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-upgrade.sh
 echo "########################################################################"
+sleep 2s
 
 echo "### Configure package sources"
 echo "------------------------------------------------------------------------"
 echo "########################################################################"
+sleep 2s
 
 echo "### Install additional packages"
 echo "------------------------------------------------------------------------"
@@ -33,11 +35,13 @@ sh $SCRIPT_PATH/software/itop/apt-install.sh
 sh $SCRIPT_PATH/software/net-tools/apt-install.sh
 sh $SCRIPT_PATH/software/screen/apt-install.sh
 echo "########################################################################"
+sleep 2s
 
 echo "### Execute template base configuration scripts"
 echo "------------------------------------------------------------------------"
 sh $SCRIPT_PATH/os/generic/grub/net-ifnames.sh
 echo "########################################################################"
+sleep 2s
 
 echo "### Execute template hardening scripts"
 echo "------------------------------------------------------------------------"
@@ -52,6 +56,7 @@ sh $SCRIPT_PATH/os/generic/security/hardening/etc/motd.sh
 sh $SCRIPT_PATH/os/generic/security/hardening/etc/sysctl.sh
 sh $SCRIPT_PATH/os/generic/security/hardening/ssh/sshd_config.sh
 echo "########################################################################"
+sleep 2s
 
 echo "### Template cleanup"
 echo "------------------------------------------------------------------------"
@@ -61,10 +66,15 @@ sh $SCRIPT_PATH/os/generic/cloud-init/cleanup.sh
 sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-autoremove.sh
 sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-autoclean.sh
 echo "########################################################################"
+sleep 2s
 
 echo "### Remove Provisioner User"
 echo "------------------------------------------------------------------------"
 sh $SCRIPT_PATH/os/generic/security/users/remove_provisioner_user.sh $PROVISIONER_USERNAME
-
 echo "########################################################################"
+sleep 2s
+
 echo " "
+echo "########################################################################"
+echo "UBUNTU TEMPLATE FROM MINIMAL INSTALLATION - COMPLETED"
+echo "########################################################################"
