@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install cronie"
-apt-get install -y cron
+apt-get install -y cronie
