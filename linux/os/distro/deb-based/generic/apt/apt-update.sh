@@ -1,12 +1,3 @@
 #!/bin/bash
-echo "########################################################################"
-echo "LINUX - OS - DISTRO - DEBIAN-BASED - GENERIC - apt-get update"
-echo "########################################################################"
-
-
-echo "### Run apt-get update"
+echo "### run apt-get update"
 apt-get update
-
-
-echo "########################################################################"
-echo " "

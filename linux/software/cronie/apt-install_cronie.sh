@@ -1,12 +1,3 @@
 #!/bin/bash
-echo "########################################################################"
-echo "LINUX - SOFTWARE - CRON - Install cronie"
-echo "########################################################################"
-
-
-echo "### apt install cronie"
-sudo apt-get install -y cronie
-
-
-echo "########################################################################"
-echo " "
+echo "### install cronie"
+apt-get install -y cronie

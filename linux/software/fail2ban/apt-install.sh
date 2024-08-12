@@ -1,12 +1,3 @@
 #!/bin/bash
-echo "########################################################################"
-echo "LINUX - SOFTWARE - FAIL2BAN - Install"
-echo "########################################################################"
-
-
-echo "### apt install fail2ban"
-sudo apt-get install -y fail2ban
-
-
-echo "########################################################################"
-echo " "
+echo "### install fail2ban"
+apt-get install -y fail2ban
