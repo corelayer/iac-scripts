@@ -25,10 +25,11 @@ sh /tmp/iac-scripts/linux/software/curl/apt-install.sh
 sh /tmp/iac-scripts/linux/software/fail2ban/apt-install.sh
 sh /tmp/iac-scripts/linux/software/gnupg2/apt-install.sh
 sh /tmp/iac-scripts/linux/software/htop/apt-install.sh
+sh /tmp/iac-scripts/linux/software/inetutils/apt-install_inetutils-ping.sh
+sh /tmp/iac-scripts/linux/software/inetutils/apt-install_inetutils-traceroute.sh
 sh /tmp/iac-scripts/linux/software/itop/apt-install.sh
 sh /tmp/iac-scripts/linux/software/net-tools/apt-install.sh
 sh /tmp/iac-scripts/linux/software/screen/apt-install.sh
-sh /tmp/iac-scripts/linux/software/traceroute/apt-install.sh
 echo "########################################################################"
 
 echo "### Execute template base configuration scripts"
