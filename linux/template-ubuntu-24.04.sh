@@ -5,6 +5,7 @@ echo "########################################################################"
 echo "### Update system"
 echo "------------------------------------------------------------------------"
 sh /tmp/iac-scripts/linux/os/distro/deb-based/generic/apt/apt-update.sh
+sh /tmp/iac-scripts/linux/os/distro/deb-based/generic/apt/apt-configure.sh
 sh /tmp/iac-scripts/linux/os/distro/deb-based/generic/apt/apt-upgrade.sh
 echo "########################################################################"
 
@@ -16,7 +17,11 @@ echo "### Install additional packages"
 echo "------------------------------------------------------------------------"
 sh /tmp/iac-scripts/linux/software/apparmor/apt-install_apparmor-profiles.sh
 sh /tmp/iac-scripts/linux/software/apparmor/apt-install_apparmor-utils.sh
-# sh /tmp/iac-scripts/linux/software/cronie/apt-install.sh
+sh /tmp/iac-scripts/linux/software/bash/apt-install_bash-completion.sh
+sh /tmp/iac-scripts/linux/software/ca-certificates/apt-install.sh
+sh /tmp/iac-scripts/linux/software/cloud-init/apt-install.sh
+sh /tmp/iac-scripts/linux/software/cron/apt-install.sh
+sh /tmp/iac-scripts/linux/software/curl/apt-install.sh
 sh /tmp/iac-scripts/linux/software/fail2ban/apt-install.sh
 sh /tmp/iac-scripts/linux/software/gnupg2/apt-install.sh
 sh /tmp/iac-scripts/linux/software/htop/apt-install.sh
