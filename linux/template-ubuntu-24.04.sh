@@ -32,8 +32,10 @@ sh $SCRIPT_PATH/software/htop/apt-install.sh
 sh $SCRIPT_PATH/software/inetutils/apt-install_inetutils-ping.sh
 sh $SCRIPT_PATH/software/inetutils/apt-install_inetutils-traceroute.sh
 sh $SCRIPT_PATH/software/itop/apt-install.sh
+sh $SCRIPT_PATH/software/nano/apt-install.sh
 sh $SCRIPT_PATH/software/net-tools/apt-install.sh
 sh $SCRIPT_PATH/software/screen/apt-install.sh
+sh $SCRIPT_PATH/software/ufw/apt-install.sh
 echo "########################################################################"
 sleep 2s
 
