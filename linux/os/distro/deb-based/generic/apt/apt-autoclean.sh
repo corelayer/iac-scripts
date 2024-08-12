@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### run apt-get autoclean"
-apt-get autoclean -q -y
+DEBIAN_FRONTEND="noninteractive" apt-get autoclean -q -y
