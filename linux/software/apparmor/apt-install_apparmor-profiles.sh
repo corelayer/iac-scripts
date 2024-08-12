@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install apparmor-profiles"
-apt-get install -y apparmor-profiles
+DEBIAN_FRONTEND="noninteractive" apt-get install -y apparmor-profiles

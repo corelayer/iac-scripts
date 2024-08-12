@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install curl"
-apt-get install -y curl
+DEBIAN_FRONTEND="noninteractive" apt-get install -y curl

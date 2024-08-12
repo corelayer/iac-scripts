@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install apparmor-utils"
-apt-get install -y apparmor-utils
+DEBIAN_FRONTEND="noninteractive" apt-get install -y apparmor-utils

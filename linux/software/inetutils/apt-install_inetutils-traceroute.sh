@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install inetutils-traceroute"
-apt-get install -y inetutils-traceroute
+DEBIAN_FRONTEND="noninteractive" apt-get install -y inetutils-traceroute

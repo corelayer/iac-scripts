@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install packer"
-apt-get install -y packer
+DEBIAN_FRONTEND="noninteractive" apt-get install -y packer

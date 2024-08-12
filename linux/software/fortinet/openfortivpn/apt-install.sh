@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install openfortivpn"
-apt-get install -y openfortivpn
+DEBIAN_FRONTEND="noninteractive" apt-get install -y openfortivpn

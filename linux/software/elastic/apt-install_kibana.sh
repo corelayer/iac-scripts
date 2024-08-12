@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "### install kibana"
-apt-get install -y kibana
+DEBIAN_FRONTEND="noninteractive" apt-get install -y kibana
 
 echo "### --> enable systemd service kibana"
 systemctl enable kibana

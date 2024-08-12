@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "### install elasticsearch"
-apt-get install -y elasticsearch
+DEBIAN_FRONTEND="noninteractive" apt-get install -y elasticsearch
 
 echo "### --> enable systemd service elasticsearch"
 systemctl enable elasticsearch

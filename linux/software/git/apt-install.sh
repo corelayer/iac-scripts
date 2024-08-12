@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install git"
-apt-get install -y git
+DEBIAN_FRONTEND="noninteractive" apt-get install -y git

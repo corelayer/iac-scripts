@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 echo "### Install TimeScaleDB for PostgreSQL 12.x"
-apt-get install -y timescaledb-2-postgresql-12
+DEBIAN_FRONTEND="noninteractive" apt-get install -y timescaledb-2-postgresql-12
 
 echo "#                                                                      #"
 echo "########################################################################"

@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install htop"
-apt-get install -y htop
+DEBIAN_FRONTEND="noninteractive" apt-get install -y htop

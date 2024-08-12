@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install python3"
-apt-get install -y python3
+DEBIAN_FRONTEND="noninteractive" apt-get install -y python3

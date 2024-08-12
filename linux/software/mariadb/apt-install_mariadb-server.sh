@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install mariadb-server"
-apt-get install -y software-properties-common mariadb-server mariadb-client
+DEBIAN_FRONTEND="noninteractive" apt-get install -y software-properties-common mariadb-server mariadb-client

@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get install -y privacyidea-radius
+DEBIAN_FRONTEND="noninteractive" apt-get install -y privacyidea-radius
 
 echo "#                                                                      #"
 echo "#                                                                      #"

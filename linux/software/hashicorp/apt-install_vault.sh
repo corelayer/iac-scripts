@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install vault"
-apt-get install -y vault
+DEBIAN_FRONTEND="noninteractive" apt-get install -y vault

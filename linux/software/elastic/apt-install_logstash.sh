@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "### install logstash"
-apt-get install -y logstash
+DEBIAN_FRONTEND="noninteractive" apt-get install -y logstash
 
 echo "### --> enable systemd service logstash"
 systemctl enable logstash

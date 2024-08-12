@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install net-tools"
-apt-get install -y net-tools
+DEBIAN_FRONTEND="noninteractive" apt-get install -y net-tools

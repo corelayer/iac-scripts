@@ -6,7 +6,7 @@ echo "#                                                                      #"
 echo "#                                                                      #"
 
 
-apt-get install -y mysql-server
+DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server
 
 echo "#                                                                      #"
 echo "#                                                                      #"

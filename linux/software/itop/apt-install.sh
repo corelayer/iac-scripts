@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install itop"
-apt-get install -y itop
+DEBIAN_FRONTEND="noninteractive" apt-get install -y itop

@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install postgresql-12"
-apt-get install -y postgresql-12
+DEBIAN_FRONTEND="noninteractive" apt-get install -y postgresql-12

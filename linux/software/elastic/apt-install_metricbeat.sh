@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "### install metricbeat"
-apt-get install -y metricbeat
+DEBIAN_FRONTEND="noninteractive" apt-get install -y metricbeat
 
 echo "### --> enable systemd service metricbeat"
 systemctl enable metricbeat

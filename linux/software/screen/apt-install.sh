@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "### install screen"
-apt-get install -y screen
+DEBIAN_FRONTEND="noninteractive" apt-get install -y screen
