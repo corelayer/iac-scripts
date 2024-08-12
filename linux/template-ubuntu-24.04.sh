@@ -40,7 +40,6 @@ echo "########################################################################"
 echo "### Execute template hardening scripts"
 echo "------------------------------------------------------------------------"
 sh /tmp/iac-scripts/linux/os/generic/security/hardening/apparmor/enforce-ping.sh
-sh /tmp/iac-scripts/linux/os/generic/security/hardening/apparmor/enforce-traceroute.sh
 sh /tmp/iac-scripts/linux/os/generic/security/hardening/etc/fail2ban.sh
 sh /tmp/iac-scripts/linux/os/generic/security/hardening/etc/fstab.sh
 sh /tmp/iac-scripts/linux/os/generic/security/hardening/etc/host.sh
