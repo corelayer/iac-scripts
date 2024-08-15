@@ -1,7 +1,14 @@
 #!/bin/sh
-
+echo "### configure iptables"
 INTERFACE_LOCAL=lo
 INTERFACE_HOST=$1
+
+
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+
+iptables -F
 
 # Allow traffic on localhost
 iptables -A INPUT -i $INTERFACE_LOCAL -j ACCEPT
