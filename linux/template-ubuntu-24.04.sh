@@ -44,7 +44,6 @@ sh $SCRIPT_PATH/software/itop/apt-install.sh
 sh $SCRIPT_PATH/software/nano/apt-install.sh
 sh $SCRIPT_PATH/software/net-tools/apt-install.sh
 sh $SCRIPT_PATH/software/screen/apt-install.sh
-sh $SCRIPT_PATH/software/ufw/apt-install.sh
 echo "########################################################################"
 echo ""
 echo ""
