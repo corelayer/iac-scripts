@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure repository for elastic"
 echo "### --> add apt-get key"
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -

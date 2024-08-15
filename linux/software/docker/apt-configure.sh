@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "### configure repository for docker"
 echo "### --> install dependencies"

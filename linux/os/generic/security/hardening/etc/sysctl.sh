@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure /etc/sysctl.conf"
 echo "### --> remove old /etc/sysctl.conf"
 rm -f /etc/sysctl.conf

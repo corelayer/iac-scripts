@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure sshd"
 echo "### --> remove old /etc/ssh/sshd_config"
 rm -f /etc/ssh/sshd_config

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### check if apt is running"
 inProgress=true
 while [ $inProgress = true ]

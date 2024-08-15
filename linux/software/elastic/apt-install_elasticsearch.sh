@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### install elasticsearch"
 DEBIAN_FRONTEND="noninteractive" apt-get install -y elasticsearch
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### clean up cloud-init"
 
 FILE=/etc/cloud/cloud.cfg.d/50-curtin-networking.cfg

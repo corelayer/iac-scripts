@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "########################################################################"
 echo "LINUX - SOFTWARE - NETKNIGHTS - PRIVACYIDEA FREERADIUS - UBUNTU - INSTALL"
 echo "########################################################################"

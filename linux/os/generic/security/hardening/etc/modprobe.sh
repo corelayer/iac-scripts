@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure /etc/modprobe.d/blacklist.conf"
 echo '' >> /etc/modprobe.d/blacklist.conf
 echo '### Modprobe hardening' >> /etc/modprobe.d/blacklist.conf

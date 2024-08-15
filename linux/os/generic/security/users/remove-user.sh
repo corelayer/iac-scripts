@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 user=$1
 echo "### remove user $user"
 deluser $user --remove-home

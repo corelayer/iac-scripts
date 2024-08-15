@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "########################################################################"
 echo "LINUX - SOFTWARE - JETBRAINS - TEAMCITY - GENERIC - Configure PostgreSQL driver"
 echo "########################################################################"

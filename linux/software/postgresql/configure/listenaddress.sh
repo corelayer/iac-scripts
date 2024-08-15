@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure postgresql"
 
 version=$1

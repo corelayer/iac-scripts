@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure repository for 1password"
 
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | \

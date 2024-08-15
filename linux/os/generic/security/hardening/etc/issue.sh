@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure /etc/issue"
 
 echo "### --> remove old /etc/issue"

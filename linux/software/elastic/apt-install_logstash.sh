@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### install logstash"
 DEBIAN_FRONTEND="noninteractive" apt-get install -y logstash
 

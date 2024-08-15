@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### install filebeat"
 DEBIAN_FRONTEND="noninteractive" apt-get install -y filebeat
 

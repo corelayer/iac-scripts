@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### secure mariadb-server"
 
 echo "### --> update root password"

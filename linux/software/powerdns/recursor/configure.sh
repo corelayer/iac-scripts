@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure pdns-recursor"
 
 template_path=$1

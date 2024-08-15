@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure /etc/host.conf"
 
 echo "### --> remove old /etc/host.conf"

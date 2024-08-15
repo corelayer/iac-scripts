@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "### configure apt"
 echo "### --> install apt-utils"
 DEBIAN_FRONTEND="noninteractive" apt-get install -y apt-utils
