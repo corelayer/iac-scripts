@@ -68,6 +68,7 @@ sh $SCRIPT_PATH/os/generic/security/hardening/etc/issue.sh
 sh $SCRIPT_PATH/os/generic/security/hardening/etc/modprobe.sh
 sh $SCRIPT_PATH/os/generic/security/hardening/etc/motd.sh
 sh $SCRIPT_PATH/os/generic/security/hardening/etc/sysctl.sh
+sh $SCRIPT_PATH/os/generic/security/hardening/iptables/iptables_default.sh eth0
 sh $SCRIPT_PATH/os/generic/security/hardening/ssh/sshd_config.sh
 echo "########################################################################"
 echo ""
