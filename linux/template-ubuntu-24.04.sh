@@ -22,6 +22,7 @@ echo "------------------------------------------------------------------------"
 sh $SCRIPT_PATH/software/apparmor/apt-install_apparmor-profiles.sh
 sh $SCRIPT_PATH/software/apparmor/apt-install_apparmor-utils.sh
 sh $SCRIPT_PATH/software/bash/apt-install_bash-completion.sh
+sh $SCRIPT_PATH/software/bind9/apt-install_bind9-dnsutils.sh
 sh $SCRIPT_PATH/software/ca-certificates/apt-install.sh
 sh $SCRIPT_PATH/software/cloud-init/apt-install.sh
 sh $SCRIPT_PATH/software/cron/apt-install.sh
