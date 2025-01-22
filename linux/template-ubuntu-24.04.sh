@@ -79,7 +79,7 @@ echo "### Template cleanup"
 echo "------------------------------------------------------------------------"
 sh $SCRIPT_PATH/os/generic/crontab/cleanup-user.sh root
 sh $SCRIPT_PATH/os/generic/crontab/cleanup-user.sh $PROVISIONER_USERNAME
-#sh $SCRIPT_PATH/os/generic/cloud-init/cleanup.sh
+sh $SCRIPT_PATH/os/generic/cloud-init/cleanup.sh
 sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-autoremove.sh
 sh $SCRIPT_PATH/os/distro/deb-based/generic/apt/apt-autoclean.sh
 echo "########################################################################"

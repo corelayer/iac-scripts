@@ -7,11 +7,11 @@ if test -f "$FILE"; then
   rm $FILE
 fi
 
-FILE=/etc/cloud/cloud.cfg.d/curtin-preserve-sources.cfg
-if test -f "$FILE"; then
-  echo "### --> delete $FILE"
-  rm $FILE
-fi
+# FILE=/etc/cloud/cloud.cfg.d/curtin-preserve-sources.cfg
+# if test -f "$FILE"; then
+#   echo "### --> delete $FILE"
+#   rm $FILE
+# fi
 
 FILE=/etc/cloud/cloud.cfg.d/subiquity-disable-cloudinit-networking.cfg
 if test -f "$FILE"; then
@@ -19,11 +19,11 @@ if test -f "$FILE"; then
   rm $FILE
 fi
 
-FILE=/etc/cloud/cloud.cfg.d/90_dpkg.cfg
-if test -f "$FILE"; then
-  echo "### --> delete $FILE"
-  rm $FILE
-fi
+# FILE=/etc/cloud/cloud.cfg.d/90_dpkg.cfg
+# if test -f "$FILE"; then
+#   echo "### --> delete $FILE"
+#   rm $FILE
+# fi
 
 echo "### --> create /etc/cloud/cloud.cfg.d/99-pve.cfg"
 touch /etc/cloud/cloud.cfg.d/99-pve.cfg
